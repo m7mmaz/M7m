@@ -1,11 +1,14 @@
-const CACHE_NAME = 'food-sensitivity-smart-v2';
+const CACHE_NAME = 'food-sensitivity-smart-v3';
 const ASSETS = [
   './',
   './index.html',
   './manifest.webmanifest',
+  './config.js',
   './icon.svg',
   './icon-192.png',
-  './icon-512.png'
+  './icon-512.png',
+  './apple-touch-icon.png',
+  './favicon-64.png'
 ];
 self.addEventListener('install', event => {
   event.waitUntil(caches.open(CACHE_NAME).then(cache => cache.addAll(ASSETS)).then(() => self.skipWaiting()));
